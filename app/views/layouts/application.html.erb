@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Tumblrr</title>
+    <title>Tumblr</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -18,8 +18,12 @@
         <li><%= link_to "Posts", root_path %></li>
         <li><%= link_to "About", about_path%></li>
       </ul>
-    <p class="sign_in">User Login</p>
+
+    <% if !user_signed_in? %>  
+      <p class="sign_in"><%= link_to "User Login", new_user_session_path %></p>
+    <% end %>  
     </div>
+
     <div id="main_content">
       <div id = "header">
         <% if current_page?(root_path) %>
@@ -30,10 +34,13 @@
           <%= link_to "Back to Post Feed", root_path %>
         <% end %>  
 
-        <div class="buttons">
-          <button class="buttons"><%=link_to "Make Post", new_post_path %></button>
-          <button class="buttons">LogOut</button>
-        </div>
+        <% if user_signed_in? %>
+          <div class="buttons">
+            <button class="buttons"><%= link_to "Make Post", new_post_path %></button>
+            <button class="buttons"><%= link_to "LogOut", destroy_user_session_path, method: :delete %></button>
+          </div>
+        <% end %>
+
       </div>
       <% flash.each do |name,msg| %>
         <%= content_tag(:div,msg, class: "alert") %>
