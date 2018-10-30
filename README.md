@@ -1,22 +1,24 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a mvp exercise inspired of first tumblr versions and it's always WIP
 
-Things you may want to cover:
 
 * Ruby version
+Ruby 2.5.1
 
 * System dependencies
 
 * Configuration
 
-* Database creation
-
-* Database initialization
+Run bundle install 
+Run rake db:migrate
+Run rails s
+Sign up
+* Database 
+SQLite
 
 * How to run the test suite
-
+run rspec
 * Services (job queues, cache servers, search engines, etc.)
 
 * Deployment instructions
