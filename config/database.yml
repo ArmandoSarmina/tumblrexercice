@@ -31,7 +31,8 @@ test:
 
 production:
   <<: *default
+  host: localhost
   database: tumblrr_production
-  username: root
-  password: root
+  username: tumblrr
+  password: Temporal1+
 
