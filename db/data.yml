@@ -1,0 +1,66 @@
+
+---
+ar_internal_metadata:
+  columns:
+  - key
+  - value
+  - created_at
+  - updated_at
+  records: 
+  - - environment
+    - development
+    - '2018-10-27 00:06:01.802297'
+    - '2018-10-27 00:06:01.802297'
+
+---
+comments:
+  columns:
+  - id
+  - name
+  - body
+  - post_id
+  - created_at
+  - updated_at
+  records: 
+  - - 1
+    - John Cugar
+    - First Comment made by John
+    - 1
+    - '2018-10-29 15:44:26.922873'
+    - '2018-10-29 15:44:26.922873'
+
+---
+posts:
+  columns:
+  - id
+  - title
+  - body
+  - created_at
+  - updated_at
+  records: 
+  - - 1
+    - 'this is our first post '
+    - Este es  un ppequeño ekje,mpl de post
+    - '2018-10-27 00:12:38.276092'
+    - '2018-10-27 00:12:38.276092'
+
+---
+users:
+  columns:
+  - id
+  - email
+  - encrypted_password
+  - reset_password_token
+  - reset_password_sent_at
+  - remember_created_at
+  - created_at
+  - updated_at
+  records: 
+  - - 1
+    - user@example.com
+    - "$2a$11$WLyr2dfRbnVH3jyXOreHMe8Go/hVv4RJHXg22gvgsJYsxsjgn4jYO"
+    - 
+    - 
+    - 
+    - '2018-10-29 16:43:03.221005'
+    - '2018-10-29 16:43:03.221005'
